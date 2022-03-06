@@ -1,0 +1,69 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Test swift-websocket",
+            "program": "/Applications/Xcode.app/Contents/Developer/usr/bin/xctest",
+            "args": [
+                ".build/debug/swift-websocketPackageTests.xctest"
+            ],
+            "cwd": "${workspaceFolder:swift-websocket}",
+            "preLaunchTask": "swift: Build All"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Server",
+            "program": "${workspaceFolder:swift-websocket}/.build/debug/Server",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-websocket}",
+            "preLaunchTask": "swift: Build Debug Server"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release Server",
+            "program": "${workspaceFolder:swift-websocket}/.build/release/Server",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-websocket}",
+            "preLaunchTask": "swift: Build Release Server"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Example",
+            "program": "${workspaceFolder:swift-websocket}/.build/debug/Example",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-websocket}",
+            "preLaunchTask": "swift: Build Debug Example"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release Example",
+            "program": "${workspaceFolder:swift-websocket}/.build/release/Example",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-websocket}",
+            "preLaunchTask": "swift: Build Release Example"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Client",
+            "program": "${workspaceFolder:swift-websocket}/.build/debug/Client",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-websocket}",
+            "preLaunchTask": "swift: Build Debug Client"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release Client",
+            "program": "${workspaceFolder:swift-websocket}/.build/release/Client",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-websocket}",
+            "preLaunchTask": "swift: Build Release Client"
+        }
+    ]
+}
