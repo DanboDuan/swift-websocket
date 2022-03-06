@@ -14,6 +14,10 @@ let package = Package(
             name: "WebSocket",
             targets: ["WebSocket"]
         ),
+        .library(
+            name: "AsyncAwaitSupport",
+            targets: ["AsyncAwaitSupport"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.3"),
