@@ -67,9 +67,11 @@ final class PingPongHandler: ChannelInboundHandler {
                 // for the peer to respond with their close frame. We are in a timeout situation,
                 // so the other side likely will never send the close frame. We just close the
                 // channel ourselves.
+                log("waiting for pong timeout")
                 self.channel.channel.close(mode: .all, promise: nil)
             }
         } else {
+            log("auto send ping")
             channel.sendPing()
             waitingForPong = true
             scheduledTimeoutTask = channel.channel.eventLoop.scheduleTask(
